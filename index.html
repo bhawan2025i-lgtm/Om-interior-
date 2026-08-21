@@ -3,85 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ॐ इंटीरियर | Modern PVC & Interior Design</title>
+    <title>ॐ इंटीरियर | Modern PVC & False Ceiling Shahpura</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
-        body { background-color: #fffef2; color: #1a1a1a; }
-        
-        /* Header */
-        header { background: #0b1739; color: #ffffff; padding: 20px 15px; text-align: center; }
-        .header-top { max-width: 600px; margin: auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.8rem; font-weight: 700; color: #ffffff; }
-        .logo span { color: #eab308; }
-        .contacts { font-size: 0.8rem; text-align: right; }
-        .tagline { margin-top: 15px; font-size: 0.9rem; color: #f1f5f9; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+        body {
+            background-color: #fffef2;
+            color: #111827;
+        }
 
-        /* Services */
-        .section-title { text-align: center; padding: 20px 0; font-weight: bold; font-size: 1.2rem; }
-        .services-grid { display: flex; justify-content: space-around; padding: 0 5px; margin-bottom: 20px; }
-        .service-item { text-align: center; font-size: 0.7rem; font-weight: bold; }
+        /* Top Blue Header */
+        header {
+            background-color: #0b1739;
+            color: #ffffff;
+            padding: 20px 16px 18px;
+        }
+        .header-top {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .om-icon {
+            font-size: 2.2rem;
+            color: #eab308;
+            font-weight: 700;
+            line-height: 1;
+        }
+        .brand-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-align: left;
+        }
+        .wa-green {
+            font-size: 1.6rem;
+            color: #22c55e;
+            text-decoration: none;
+        }
+        .phone-nums {
+            font-size: 0.8rem;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+        .phone-nums a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .social-circles {
+            display: flex;
+            gap: 6px;
+        }
+        .circle-btn {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .c-fb { background-color: #1877f2; }
+        .c-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%); }
+        .c-yt { background-color: #ef4444; }
 
-        /* Gallery */
-        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 0 8px; margin-bottom: 30px; }
-        .gallery-card { background: white; border: 1px solid #dcdacb; border-radius: 5px; padding: 2px; }
-        .gallery-card img { width: 100%; height: 110px; object-fit: cover; }
-        .gallery-card p { font-size: 0.65rem; text-align: center; padding: 4px 0; }
+        .tagline {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 0.88rem;
+            color: #ffffff;
+            font-weight: 500;
+            line-height: 1.35;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 24px 12px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 22px;
+        }
+
+        /* Services Grid (5 Horizontal Vector Icons) */
+        .services-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 35px;
+            padding: 0 4px;
+        }
+        .service-card {
+            text-align: center;
+            flex: 1;
+            padding: 0 2px;
+        }
+        .service-card i {
+            font-size: 1.3rem;
+            color: #0b1739;
+            margin-bottom: 6px;
+            display: block;
+        }
+        .service-card span {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            display: block;
+            line-height: 1.2;
+        }
+
+        /* Work Gallery (3x4 Rounded Cards Grid) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+        .gallery-card {
+            background: #ffffff;
+            border: 1px solid #dcdacb;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-card p {
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 6px 2px;
+            color: #1e293b;
+            background: #ffffff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
         /* Footer */
-        footer { background: #fffef2; border-top: 1px solid #e5e3d3; padding: 20px 15px; font-size: 0.8rem; }
-        .footer-flex { display: flex; justify-content: space-between; max-width: 600px; margin: auto; }
-        .footer-col { width: 48%; }
-        .footer-title { font-weight: bold; margin-bottom: 5px; }
+        footer {
+            background-color: #fffef2;
+            border-top: 1px solid #e5e3d3;
+            padding: 24px 16px 15px;
+        }
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            line-height: 1.5;
+            gap: 12px;
+        }
+        .footer-left { flex: 1.2; }
+        .footer-right { flex: 0.9; }
+        .footer-title {
+            font-weight: 700;
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+            color: #000;
+        }
+        .footer-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 3px;
+            color: #333;
+            font-weight: 600;
+        }
+        .footer-item a {
+            color: #333;
+            text-decoration: none;
+        }
+        .footer-item i { font-size: 0.85rem; }
+        .fa-whatsapp { color: #22c55e; }
+        .fa-instagram { color: #e1306c; }
+        .fa-phone { color: #0b1739; }
+
+        .copyright {
+            text-align: center;
+            font-size: 0.68rem;
+            color: #666;
+            margin-top: 25px;
+        }
     </style>
 </head>
 <body>
 
 <header>
     <div class="header-top">
-        <div class="logo"><span>ॐ</span> इंटीरियर</div>
-        <div class="contacts">
-            📞 8764435162 | 8890276266<br>
-            💬 80587 46373
+        <div class="brand">
+            <span class="om-icon">ॐ</span>
+            <span class="brand-text">इंटीरियर</span>
+        </div>
+        <div class="header-right">
+            <a href="https://wa.me/918058746373" target="_blank" class="wa-green"><i class="fa-brands fa-whatsapp"></i></a>
+            <div class="phone-nums">
+                <a href="tel:8764435162">8764435162</a><br>
+                <a href="tel:8890276266">8890276266</a>
+            </div>
+            <div class="social-circles">
+                <a href="https://maps.app.goo.gl/n37NQX3Fbb9JACxu8?g_st=ac" target="_blank" class="circle-btn c-fb" title="Google Maps"><i class="fa-solid fa-location-dot"></i></a>
+                <a href="https://www.instagram.com/om_pvc_4552/" target="_blank" class="circle-btn c-ig" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/918058746373" target="_blank" class="circle-btn c-yt" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
         </div>
     </div>
-    <div class="tagline">Modern PVC Panel Ceilings, False Ceilings & Custom Designs: Style, Quality, Trust</div>
+    <div class="tagline">
+        Modern PVC Panel Ceilings, False Ceilings &amp; Custom Designs: Style, Quality, Trust
+    </div>
 </header>
 
-<h2 class="section-title">Services</h2>
-<div class="services-grid">
-    <div class="service-item">🧱<br>PVC Panel</div>
-    <div class="service-item">🏠<br>Wall Panel</div>
-    <div class="service-item">🪵<br>WPC Louvers</div>
-    <div class="service-item">✨<br>PVC Ceiling</div>
-</div>
+<div class="container">
+    <!-- Services Section -->
+    <h2 class="section-title">Services</h2>
+    <div class="services-row">
+        <div class="service-card">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>PVC Panel Ceilings</span>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-fan"></i>
+            <span>False Ceilings</span>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-bars"></i>
+            <span>Wall Paneling</span>
+        </div>
+        <div class="service-card">
+            <i class="fa-solid fa-ruler-combined"></i>
+            <span>Custom Designs</span>
+        </div>
+        <div class="service-card">
+            <i class="fa-regular fa-lightbulb"></i>
+            <span>Profile Lighting</span>
+        </div>
+    </div>
 
-<h2 class="section-title">Our Work Gallery</h2>
-<div class="gallery-grid">
-    <div class="gallery-card"><img src="image%2015.jpg"><p>Modern PVC</p></div>
-    <div class="gallery-card"><img src="image%2016.jpg"><p>Wall Panel</p></div>
-    <div class="gallery-card"><img src="image%2017.jpg"><p>False Ceiling</p></div>
-    <div class="gallery-card"><img src="image%2018.jpg"><p>Living Room</p></div>
-    <div class="gallery-card"><img src="image%2019.jpg"><p>WPC Louvers</p></div>
-    <div class="gallery-card"><img src="image%2020.jpg"><p>Profile Light</p></div>
-    <div class="gallery-card"><img src="image1.jpg"><p>PVC Work</p></div>
-    <div class="gallery-card"><img src="image2.jpg"><p>Interior</p></div>
-    <div class="gallery-card"><img src="image3.jpg"><p>Custom Design</p></div>
+    <!-- Gallery Grid -->
+    <h2 class="section-title">Our Work Gallery</h2>
+    <div class="gallery-grid">
+        <div class="gallery-card"><img src="image%2015.jpg" alt="Work 1"><p>Modern PVC Ceiling</p></div>
+        <div class="gallery-card"><img src="image%2016.jpg" alt="Work 2"><p>Textured Wall Panel</p></div>
+        <div class="gallery-card"><img src="image%2017.jpg" alt="Work 3"><p>Designer False Ceiling</p></div>
+        <div class="gallery-card"><img src="image%2018.jpg" alt="Work 4"><p>Living Room Ceiling</p></div>
+        <div class="gallery-card"><img src="image%2019.jpg" alt="Work 5"><p>WPC Louvers Work</p></div>
+        <div class="gallery-card"><img src="image%2020.jpg" alt="Work 6"><p>Profile Light Ceiling</p></div>
+        <div class="gallery-card"><img src="image1.jpg" alt="Work 7"><p>Bedroom PVC Ceiling</p></div>
+        <div class="gallery-card"><img src="image2.jpg" alt="Work 8"><p>Wall Paneling Design</p></div>
+        <div class="gallery-card"><img src="image3.jpg" alt="Work 9"><p>Custom Interior Work</p></div>
+    </div>
 </div>
 
 <footer>
-    <div class="footer-flex">
-        <div class="footer-col">
+    <div class="footer-content">
+        <div class="footer-left">
             <div class="footer-title">Address:</div>
-            Kumawat Bhawan, Triveni Road, Near Govt. Hospital, Shahpura - 303103, Jaipur
+            <p>Kumawat Bhawan, Triveni Road,<br>Near Govt. Hospital, Shahpura, 303103, Jaipur</p>
         </div>
-        <div class="footer-col" style="text-align:right;">
+        <div class="footer-right">
             <div class="footer-title">Contact:</div>
-            8764435162<br>
-            8890276266<br>
-            <a href="https://www.instagram.com/om_pvc_4552/">Instagram</a>
+            <div class="footer-item"><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/918058746373">8764435162</a></div>
+            <div class="footer-item"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/om_pvc_4552/">8058746373</a></div>
+            <div class="footer-item"><i class="fa-solid fa-phone"></i> <a href="tel:8890276266">8890276266</a></div>
         </div>
     </div>
-    <p style="text-align:center; margin-top:20px; font-size:0.7rem;">Copyright © 2026 OmInterior.com</p>
+    <div class="copyright">
+        Copyright ©2026 OmInterior.com shahpura jaipur 
+    </div>
 </footer>
 
 </body>
