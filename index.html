@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Interior - Modern PVC & Ceiling Designs</title>
+    <title>ॐ इंटीरियर - Om Interior</title>
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,24 +15,34 @@
         }
         body {
             background-color: #fcfbf7;
-            color: #333;
+            color: #222;
         }
+
         /* Header */
         header {
-            background-color: #0d1b2a;
+            background-color: #0b1528;
             color: white;
-            padding: 20px 5%;
+            padding: 24px 6%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
+        /* Bada aur clear naam */
         .logo-area h1 {
-            font-size: 28px;
-            color: #e0a96d;
+            font-size: 42px;
+            font-weight: 800;
+            color: #f0ad4e;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .logo-area span {
+            font-size: 46px;
         }
         .header-contact {
             display: flex;
@@ -40,106 +51,135 @@
         }
         .header-contact .phones {
             text-align: right;
-            font-size: 14px;
+            font-size: 15px;
+            font-weight: 500;
         }
         .header-contact .phones a {
-            color: white;
+            color: #fff;
             text-decoration: none;
             display: block;
+            margin-bottom: 4px;
+        }
+        .header-contact .phones a:hover {
+            color: #f0ad4e;
         }
         .social-icons a {
             color: white;
-            margin-left: 10px;
-            font-size: 20px;
+            margin-left: 12px;
+            font-size: 24px;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: transform 0.2s;
+            display: inline-block;
         }
         .social-icons a:hover {
-            color: #e0a96d;
+            transform: scale(1.15);
         }
+
+        /* Tagline Banner */
         .tagline-banner {
-            background-color: #1b263b;
-            color: #e0e1dd;
+            background-color: #172338;
+            color: #e2e8f0;
             text-align: center;
-            padding: 12px 15px;
-            font-size: 15px;
+            padding: 14px 20px;
+            font-size: 16px;
             font-weight: 500;
+            letter-spacing: 0.5px;
         }
 
         /* Services Section */
         .services-section {
-            padding: 40px 5%;
+            padding: 45px 5% 30px;
             text-align: center;
         }
         .section-title {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 700;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             color: #111;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #f0ad4e;
+            margin: 8px auto 0;
+            border-radius: 2px;
         }
         .services-grid {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
         .service-item {
-            flex: 1 1 180px;
-            max-width: 200px;
-            padding: 15px 10px;
-            text-align: center;
+            flex: 1 1 200px;
+            max-width: 230px;
+            padding: 20px 15px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+            border: 1px solid #ede8dd;
+            transition: transform 0.2s;
+        }
+        .service-item:hover {
+            transform: translateY(-3px);
         }
         .service-item i {
-            font-size: 32px;
-            color: #1b263b;
-            margin-bottom: 10px;
+            font-size: 36px;
+            color: #0b1528;
+            margin-bottom: 12px;
         }
         .service-item p {
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 600;
             color: #222;
         }
 
         /* Work Gallery Section */
         .gallery-section {
-            padding: 20px 5% 50px 5%;
-            max-width: 1200px;
+            padding: 30px 5% 60px;
+            max-width: 1250px;
             margin: 0 auto;
         }
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 24px;
         }
         .gallery-card {
             background: #fff;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
             text-align: center;
             padding-bottom: 12px;
-            border: 1px solid #eee;
+            border: 1px solid #eae5d9;
         }
-        /* Portrait ratio: Length zyada, breadth kam */
+        /* Photo Ratio 1:2 (Height zyada, breadth aadhi) */
         .gallery-card img {
             width: 100%;
-            aspect-ratio: 3 / 4;
+            aspect-ratio: 1 / 2;
             object-fit: cover;
             display: block;
-            border-radius: 10px 10px 0 0;
+            background-color: #eaeaea;
         }
         .gallery-card h4 {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #333;
+            margin-top: 12px;
+            font-size: 15px;
+            color: #222;
             font-weight: 600;
+            padding: 0 8px;
         }
 
         /* Footer */
         footer {
-            background-color: #f7f3e8;
-            padding: 40px 5% 20px 5%;
-            border-top: 1px solid #e5dec9;
+            background-color: #f5f0e3;
+            padding: 45px 6% 25px;
+            border-top: 1px solid #ded5be;
         }
         .footer-container {
             max-width: 1100px;
@@ -153,34 +193,48 @@
             flex: 1 1 300px;
         }
         .footer-box h3 {
-            font-size: 18px;
-            margin-bottom: 12px;
+            font-size: 20px;
+            margin-bottom: 15px;
             color: #111;
         }
-        .footer-box p, .footer-box a {
-            font-size: 14px;
+        .footer-box p {
+            font-size: 15px;
             color: #444;
-            text-decoration: none;
             line-height: 1.6;
         }
         .contact-links a {
             display: flex;
             align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
+            gap: 10px;
+            margin-bottom: 10px;
             color: #222;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
         }
         .contact-links a:hover {
-            color: #0d1b2a;
-            font-weight: 600;
+            color: #d97706;
         }
         .copyright {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 35px;
             font-size: 13px;
-            color: #666;
-            border-top: 1px solid #e2dac2;
-            padding-top: 15px;
+            color: #777;
+            border-top: 1px solid #ded5be;
+            padding-top: 18px;
+        }
+
+        @media (max-width: 600px) {
+            .logo-area h1 {
+                font-size: 32px;
+            }
+            .logo-area span {
+                font-size: 36px;
+            }
+            .header-contact {
+                width: 100%;
+                justify-content: space-between;
+            }
         }
     </style>
 </head>
@@ -197,8 +251,8 @@
                 <a href="tel:8890276266"><i class="fa-solid fa-phone"></i> 8890276266</a>
             </div>
             <div class="social-icons">
-                <a href="https://wa.me/918764435162" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i></a>
-                <a href="https://www.instagram.com/om_pvc_4552?igsi=MW5vajRldWFpb3d3ag==" target="_blank"><i class="fa-brands fa-instagram" style="color: #E1306C;"></i></a>
+                <a href="https://wa.me/918764435162" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i></a>
+                <a href="https://www.instagram.com/om_pvc_4552?igsi=MW5vajRldWFpb3d3ag==" target="_blank" title="Instagram"><i class="fa-brands fa-instagram" style="color: #E1306C;"></i></a>
             </div>
         </div>
     </header>
@@ -230,31 +284,85 @@
         </div>
     </section>
 
-    <!-- Work Gallery Section -->
+    <!-- Work Gallery Section (Ratio 1:2 aur Verified Work Names) -->
     <section class="gallery-section">
-        <h2 class="section-title" style="text-align: center;">Our Work Gallery</h2>
+        <h2 class="section-title">Our Work Gallery</h2>
         <div class="gallery-grid">
-            <!-- Yaha aap apni photos ke URL 'src' me daal sakte hain -->
+            
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="PVC Ceiling Installation">
+                <img src="Image_1.png" alt="PVC Ceiling Installation">
                 <h4>PVC Ceiling Installation</h4>
             </div>
+
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80" alt="PVC Wall Paneling">
-                <h4>PVC Wall Paneling</h4>
+                <img src="Image_2.png" alt="Textured Wall Panel">
+                <h4>Textured Wall Panel</h4>
             </div>
+
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="WPC Louvers">
-                <h4>WPC Louvers</h4>
+                <img src="Image_3.png" alt="Textured Wall Panel">
+                <h4>Textured Wall Panel</h4>
             </div>
+
             <div class="gallery-card">
-                <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=600&q=80" alt="Modern Wall Panel">
+                <img src="Image_4.png" alt="Modern Wall Panel">
                 <h4>Modern Wall Panel</h4>
             </div>
+
+            <div class="gallery-card">
+                <img src="Image_5.png" alt="Textured Wall Panel">
+                <h4>Textured Wall Panel</h4>
+            </div>
+
+            <div class="gallery-card">
+                <img src="Image_6.png" alt="Textured Wall Panel">
+                <h4>Textured Wall Panel</h4>
+            </div>
+
+            <div class="gallery-card">
+                <img src="Image_10.png" alt="Textured Wall Panel">
+                <h4>Textured Wall Panel</h4>
+            </div>
+
+            <div class="gallery-card">
+                <img src="Image_11.png" alt="WPC Louvers Panel">
+                <h4>WPC Louvers Panel</h4>
+            </div>
+
+            <div class="gallery-card">
+                <img src="Image_12.png" alt="Wall Panel Installation">
+                <h4>Wall Panel Installation</h4>
+            </div>
+
+            <div class="gallery-card">
+                <img src="Image_13.png" alt="PVC Ceiling Installation">
+                <h4>PVC Ceiling Installation</h4>
+            </div>
+
+            <div class="gallery-card">
+                <img src="Image_15.png" alt="PVC Ceiling">
+                <h4>PVC Ceiling</h4>
+            </div>
+
+            <div class="gallery-card">
+                <img src="Image_16.png" alt="Wall Panel">
+                <h4>Wall Panel</h4>
+            </div>
+
+            <div class="gallery-card">
+                <img src="Image_17.png" alt="PVC Ceiling">
+                <h4>PVC Ceiling</h4>
+            </div>
+
+            <div class="gallery-card">
+                <img src="Image_18.png" alt="PVC Ceiling Installation">
+                <h4>PVC Ceiling Installation</h4>
+            </div>
+
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Area -->
     <footer>
         <div class="footer-container">
             <div class="footer-box">
@@ -263,14 +371,14 @@
             </div>
             <div class="footer-box contact-links">
                 <h3>Contact</h3>
-                <a href="https://wa.me/918764435162" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> 8764435162</a>
-                <a href="tel:8890276266"><i class="fa-solid fa-phone"></i> 8890276266</a>
+                <a href="https://wa.me/918764435162" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> +91 8764435162</a>
+                <a href="tel:8890276266"><i class="fa-solid fa-phone" style="color: #0b1528;"></i> +91 8890276266</a>
                 <a href="https://www.instagram.com/om_pvc_4552?igsi=MW5vajRldWFpb3d3ag==" target="_blank"><i class="fa-brands fa-instagram" style="color: #E1306C;"></i> @om_pvc_4552</a>
-                <a href="https://maps.app.goo.gl/28VFz6DesvF8eF5T7?g_st=ac" target="_blank"><i class="fa-solid fa-location-dot" style="color: #EA4335;"></i> View on Google Maps</a>
+                <a href="https://maps.app.goo.gl/28VFz6DesvF8eF5T7?g_st=ac" target="_blank"><i class="fa-solid fa-location-dot" style="color: #EA4335;"></i> Google Maps Location</a>
             </div>
         </div>
         <div class="copyright">
-            Copyright © 2026 OmInterior.com
+            Copyright © 2026 OmInterior.com | All Rights Reserved
         </div>
     </footer>
 
